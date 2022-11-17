@@ -1,0 +1,22 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: Bakugan03
+    url: jdbc:postgresql://localhost:5432/First_Work_DB
+
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
