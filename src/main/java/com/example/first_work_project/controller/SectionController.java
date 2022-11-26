@@ -1,8 +1,8 @@
 package com.example.first_work_project.controller;
 
-import com.example.first_work_project.classes.Application;
+import com.example.first_work_project.classes.Node;
 import com.example.first_work_project.classes.Section;
-import com.example.first_work_project.service.ApplicationService;
+import com.example.first_work_project.service.NodeService;
 import com.example.first_work_project.service.SectionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Controller
-@RequestMapping("/section")
+@RequestMapping("/kb/section")
 public class SectionController {
 
     @Autowired
     private SectionService sectionService;
 
-    @RequestMapping(value = "getall", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(value = "/getall", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<List<Section>> getAll(){
         return new ResponseEntity<>(sectionService.getAll(), HttpStatus.OK);
     }

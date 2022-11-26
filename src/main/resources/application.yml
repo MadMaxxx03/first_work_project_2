@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: Bakugan03
-    url: jdbc:postgresql://localhost:5432/First_Work_DB
+    url: jdbc:postgresql://localhost:5432/first_work_db_2
 
   jpa:
     show-sql: true
